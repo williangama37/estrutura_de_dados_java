@@ -1,0 +1,30 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    int i=0;
+	    class Node {
+	        private int valor;
+	        private Node proximo;
+	    }
+	    
+	    Node node1 = new Node();
+	    node1.valor = 10;
+	    
+	    Node node2 = new Node();
+	    node2.valor = 20;
+	    
+	    Node node3 = new Node();
+	    node3.valor = 30;
+	    
+	    node1.proximo = node2;
+	    node2.proximo = node3;
+	    
+	    Node atualNode = node1;
+	    while(atualNode != null){
+	        System.out.println(atualNode.valor);
+	        atualNode = atualNode.proximo;
+	        i++;
+	    }
+	    System.out.println("Quantidade de nos: " + i);
+	}
+}
